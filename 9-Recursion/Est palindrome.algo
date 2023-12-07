@@ -1,0 +1,26 @@
+FUNCTION Est_Palindrome(ch : String) : Boolean;
+VAR
+c:char;
+BEGIN
+If (Length(ch)< 2 or ch=" " or ch="c")  Then 
+Palindrome := True;
+Else If (ch[1] = ch[length(ch)])Then 
+Palindrome := Palindrome (Copy (ch, 2, Length (ch) - 2));
+Else Palindrome := False;
+RETURN ch;
+END
+
+
+
+ALGORITHM palindrome_rec
+VAR
+ch : String;
+BEGIN
+Write ('Donner ch = ');
+Read (ch);
+IF Est_Palindrome(ch) THEN
+Write (ch, ' est un palindrome.');
+ELSE
+Write (ch, ' n''est pas un palindrome.'); 
+END_IF
+END
