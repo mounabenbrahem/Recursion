@@ -1,26 +1,12 @@
-FUNCTION Est_Palindrome(ch : String) : Boolean;
-VAR
-c:char;
+PROCEDURE Test_Palindrom(ch : STRING, l;r:INTEGER)
 BEGIN
-If (Length(ch)< 2 or ch=" " or ch="c")  Then 
-Palindrome := True;
-Else If (ch[1] = ch[length(ch)])Then 
-Palindrome := Palindrome (Copy (ch, 2, Length (ch) - 2));
-Else Palindrome := False;
-RETURN ch;
-END
-
-
-
-ALGORITHM palindrome_rec
-VAR
-ch : String;
-BEGIN
-Write ('Donner ch = ');
-Read (ch);
-IF Est_Palindrome(ch) THEN
-Write (ch, ' est un palindrome.');
+IF (word.length=0 OR l>=r) THEN
+write ("palindrom") ;
 ELSE
-Write (ch, ' n''est pas un palindrome.'); 
+IF (word[l]=word[r]) THEN
+Test_Palindrom(word,l+1,r-1);
+ELSE
+write ("Not palindrom");
+END_IF
 END_IF
 END
